@@ -1,0 +1,203 @@
+.home {
+    text-decoration: underline;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}                
+
+    .intro {
+        background: url("/Images/drumbackground.jpg") no-repeat top center fixed;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        max-height: 1000px;
+        width: 100%;
+    }
+
+        .intro h2 {
+            padding-top: 43vh;
+            padding-bottom: 40vh;
+            font-size: 100px;
+            text-align: center;
+        }
+
+    .information {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+        .information h3 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+            .tutors {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 80%;
+                height: 500px;
+            }
+
+                .tutorInfo {
+                    border-top: #FFFFFF solid 1px;
+                    padding-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 2%;
+                    width: 100%;
+                }
+
+                    .tutorInfo
+                    .wrapper {
+                        width: 20%;
+                        height: 300px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border: #FFFFFF 1px solid;
+                        border-radius: 5px;
+                        animation: closeTutor 0.35s;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-out;
+                        background-color: #292f38;
+                    }
+
+                        @keyframes closeTutor {
+                            0% {width: 40%;
+                                height: 450px;}
+                            100% {width: 20%;
+                                  height: 300px;
+                                }
+                        }
+
+                    .tutorInfo 
+                    .wrapper:hover {
+                        width: 700px;
+                        animation: openTutor 0.35s;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-out;
+                        }
+
+                        @keyframes openTutor {
+                            0% {width: 20%;
+                                height: 300px;}
+                            100% {width: 40%;
+                                  height: 450px;}
+                        }
+
+                    .tutorInfo
+                    .wrapper:hover div > img {
+                        animation: openTutorImg 0.35s;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-out;
+                    }
+
+                        .tutorInfo
+                        .image {
+                            width: 100%;
+                        }
+
+                            .tutorInfo img {
+                                width: 100%;
+                                height: 200px;
+                                border-radius: 5px;
+                                object-fit: cover;
+                                object-position: 50% 20%;
+                                animation: closeTutorImg 0.35s;
+                                animation-fill-mode: forwards;
+                                animation-timing-function: ease-out;
+                            }
+
+                            @keyframes closeTutorImg {
+                                0% {height: 250px;}
+                                100% {height: 200px;}
+                            }
+
+                            @keyframes openTutorImg {
+                                0% {height: 200px;}
+                                100% {height: 250px;}
+                            }
+
+                        .tutorInfo
+                        .name {
+                            padding: 10px 0;
+                            font-size: 30px;
+                        }
+
+            .classes {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 400px;
+                }
+
+                .classes h3 {
+                    z-index: -1;
+                }
+
+                .classInfo {
+                    border-top: #FFFFFF solid 1px;
+                    padding-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 2%;
+                    width: 80%;
+                }
+
+                    .classInfo
+                    .wrapper {
+                        width: 14%;
+                        height: 500px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        border: #FFFFFF 1px solid;
+                        border-radius: 5px;
+                        animation: closeClass 0.35s;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-out;
+                        overflow: hidden;
+                    }
+
+                    .classInfo
+                    .wrapper:hover {
+                        animation: openClass 0.35s;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-out;
+                    }
+
+                    @keyframes closeClass {
+                        0% {height: 320px;
+                            width: 20%;}
+                        100% {height: 200px;
+                              width: 14%;}
+                    }
+
+                    @keyframes openClass {
+                        0% {height: 200px;
+                            width: 14%;}
+                        100% {height: 320px;
+                              width: 20%;}
+                    }
+
+                        .classInfo img {
+                            width: 100%;
+                            height: 150px;
+                            object-fit: cover;
+                            object-position: 50% 20%;
+                            border-radius: 5px;
+                        }
+
+                        .classInfo
+                        .name {
+                            padding: 10px 0;
+                            font-size: 30px;
+                        }             
